@@ -15,4 +15,4 @@
   
 * Caso a aplicação rode normalmente, estará disponível em `localhost:3000`
 
-<img src="./img/diagrama-UML.jpeg"  />
+<img src="./img/diagrama-UML.jpg" />
