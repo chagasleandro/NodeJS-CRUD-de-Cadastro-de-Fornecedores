@@ -14,5 +14,6 @@
   * `npm start`
   
 * Caso a aplicação rode normalmente, estará disponível em `localhost:3000`
+* Diagrama UML
 
 <img src="./img/diagrama-UML.jpg" />
