@@ -1,0 +1,769 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+    "title": "Node Bootcamp iv2",
+    "descritpion": "Documentação da API do Bootcamp de Node",
+    "version": "1.0.0"
+},
+    "basePath": "/",
+    "paths": {
+    "/api/fornecedores": {
+
+        "get": {
+    
+            "tags": ["Fornecedores"],
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Fornecedores encontrados!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    "/api/novo_fornecedor": {
+    
+        "post": {
+    
+            "tags": ["Fornecedores"],
+    
+            "requestBody": {
+    
+                "content": {
+    
+                    "application/json": {
+    
+                        "schema": {
+    
+                            "type": "object",
+    
+                            "properties": {
+    
+                                "nome": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "nomeFantasia": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "cnpj": {
+    
+                                    "type": "number"
+    
+                                }
+    
+                            }
+    
+                        }
+    
+                    }
+    
+                }
+    
+            },
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "fornecedor criado!"
+    
+                },
+    
+                "400": {
+    
+                    "description": "Algum erro ocorreu!"
+    
+                }
+    
+            }
+    
+        }
+    
+    },
+    
+    "/api/get_fornecedor/{id}": {
+    
+        "get": {
+    
+            "tags": ["Fornecedores"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id",
+    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "fornecedor encontrado!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/update_fornecedor/{id}": {
+    
+        "put": {
+    
+            "tags": ["Fornecedores"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id",
+    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "requestBody": {
+    
+                "content": {
+    
+                    "application/json": {
+    
+                        "schema": {
+    
+                            "type": "object",
+    
+                            "properties": {
+    
+                                "nome": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "nomeFantasia": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "cnpj": {
+    
+                                    "type": "number"
+    
+                                },
+    
+                                "ativo": {
+    
+                                    "type": "boolean"
+    
+                                }
+    
+                            }
+    
+                        }
+    
+                    }
+    
+                }
+    
+            },
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Fornecedor atualizado!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/delete_fornecedor/{id}": {
+    
+        "delete": {
+    
+            "tags": ["Fornecedores"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id",
+    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "responses": {
+    
+                "200":{
+    
+                    "description": "Fornecedor deletado com Sucesso!"
+    
+                }
+    
+            }
+    
+        }
+    
+    },
+    
+    "/api/produtos": {
+    
+        "get": {
+    
+            "tags": ["Produtos"],
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Produtos encontrados!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/novo_produto": {
+    
+        "post": {
+    
+            "tags": ["Produtos"],
+    
+            "requestBody": {
+    
+                "content": {
+    
+                    "application/json": {
+    
+                        "schema": {
+    
+                            "type": "object",
+    
+                            "properties": {
+    
+                                "nome": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "Descricao": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "IDFornecedor": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "Quantidade": {
+    
+                                    "type": "number"
+    
+                                },
+    
+                                "Price": {
+    
+                                    "type": "number"
+    
+                                }
+    
+                            }
+    
+                        }
+    
+                    }
+    
+                }
+    
+            },
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Fornecedor criado!"
+    
+                },
+    
+                "400": {
+    
+                    "description": "Algum erro ocorreu!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/get_produto/{id}": {
+    
+        "get": {
+    
+            "tags": ["Produtos"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id",
+    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Produto encontrado!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/update_produto/{id}": {
+    
+        "put": {
+    
+            "tags": ["Produtos"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id",
+    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "requestBody": {
+    
+                "content": {
+    
+                    "application/json": {
+    
+                        "schema": {
+    
+                            "type": "object",
+    
+                            "properties": {
+    
+                                "nome": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "descricao": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "IdFornecedor": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "quantidade": {
+    
+                                    "type": "number"
+    
+                                },
+    
+                                "price": {
+    
+                                    "type": "number"
+    
+                                },
+    
+                                "ativo": {
+    
+                                    "type": "boolean"
+    
+                                }
+    
+                            }
+    
+                        }
+    
+                    }
+    
+                }
+    
+            },
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Produto atualizado!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/delete_produto/{id}": {
+    
+        "delete": {
+    
+            "tags": ["Produtos"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id",
+    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "responses": {
+    
+                "200":{
+    
+                    "description": "Produto deletado com Sucesso!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/contratos": {
+    
+        "get": {
+    
+            "tags": ["Contratos"],
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Produtos encontrados!"
+    
+                }
+    
+            }
+    
+        }
+    
+    },
+    
+    "/api/novo_contrato": {
+    
+        "post": {
+    
+            "tags": ["Contratos"],
+    
+            "requestBody": {
+    
+                "content": {
+    
+                    "application/json": {
+    
+                        "schema": {
+    
+                            "type": "object",
+    
+                            "properties": {
+    
+                                "idFornecedor": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "docContrato": {
+    
+                                    "type": "string"
+    
+                                }
+    
+                            }
+    
+                        }
+    
+                    }
+    
+                }
+    
+            },
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Fornecedor criado!"
+    
+                },
+    
+                "400": {
+    
+                    "description": "Algum erro ocorreu!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/get_contrato/{id}": {
+    
+        "get": {
+    
+            "tags": ["Contratos"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id", 
+                    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Produto encontrado!"
+    
+                }
+    
+            }
+    
+        }
+    
+    },
+    
+    "/api/update_contrato/{id}": {
+    
+        "put": {
+    
+            "tags": ["Contratos"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id",
+    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "requestBody": {
+    
+                "content": {
+    
+                    "application/json": {
+    
+                        "schema": {
+    
+                            "type": "object",
+    
+                            "properties": {
+    
+                                "idFornecedor": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "docContrato": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "dataVencimento": {
+    
+                                    "type": "string"
+    
+                                },
+    
+                                "ativo": {
+    
+                                    "type": "boolean"
+    
+                                }
+    
+                            }
+    
+                        }
+    
+                    }
+    
+                }
+    
+            },
+    
+            "responses": {
+    
+                "200": {
+    
+                    "description": "Produto atualizado!"
+    
+                }
+    
+            }
+    
+        }
+    },
+    
+    "/api/delete_contrato/{id}": {
+    
+        "delete": {
+    
+            "tags": ["Contratos"],
+    
+            "parameters": [
+    
+                {
+    
+                    "in": "path",
+    
+                    "name": "id",
+    
+                    "schema": {
+    
+                        "type": "string"
+    
+                    },
+    
+                    "required": true
+    
+                }
+    
+            ],
+    
+            "responses": {
+    
+                    "200":{
+    
+                        "description": "Produto deletado com Sucesso!"
+                    }            
+                }
+            }
+        }
+    }
+}

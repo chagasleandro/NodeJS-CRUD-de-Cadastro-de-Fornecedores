@@ -1,20 +1,21 @@
 {
-  "name": "acme",
+  "name": "bootcamp_node",
   "version": "1.0.0",
-  "description": "Criação de APIs Rest da Empresa Acme",
+  "description": "",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon server/server.js",
+    "start": "nodemon server/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "Chagas Leandro",
+  "author": "ChagasLeandro",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.1",
     "cors": "^2.8.5",
     "express": "^4.17.2",
-    "firebase-admin": "^10.0.1"
+    "firebase-admin": "^10.0.1",
+    "swagger-ui-express": "^4.3.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"

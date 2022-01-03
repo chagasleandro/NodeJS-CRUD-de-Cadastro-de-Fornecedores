@@ -12,6 +12,7 @@
   * `json-server -p 3000 db.json`
 
   * `npm start`
+  
   * `npm run dev`
   
 * Caso a aplicação rode normalmente, estará disponível em `localhost:3000`
