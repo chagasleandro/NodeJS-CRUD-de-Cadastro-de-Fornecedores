@@ -16,6 +16,6 @@
   * `npm run start`
   
 * Caso a aplicação rode normalmente, estará disponível em `localhost:3000`
-* Diagrama UML
+* Tela do Swagger rodando.
 
 <img src="./img/project.png" />
